@@ -1,1 +1,56 @@
-Hello World
+<!DOCTYPE html>
+<script type="text/javascript">
+    var text = "松の端末歴史名鑑です。";
+    var ss = new SpeechSynthesisUtterance(text);
+    ss.rate = 0.5;
+    speechSynthesis.speak(ss);
+</script>
+<html lang=“ja”>
+  <head>
+    <meta charset=“UFT-8”>
+    <title>CSS</title>
+    <style>
+      body{
+        background: #d2b887;
+        font-family: Meiryo;
+      }
+      div.title{
+        background: #ffffff;
+        width: 300px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #cccccc;
+        margin: 30px auto;
+      }
+      div.button_wrapper{
+        text-align: center;
+      }
+      button.button_page{
+        font-weight: bold;
+        font-size: 3.4em;
+        padding: 80px, 100px;
+        color: #fff;border-style: none;
+        box-shadow: 2px 2px 3px 1px #666;
+        text-shadow: 1px 1px 2px #000;
+        text-align: center;
+        background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+        background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+        
+      }
+      button:hover{
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>松の端末歴史名鑑</h1>
+    </div>
+    <div class="button_wrapper">
+      <button class="button_page" type="submit">携帯電話</button>
+      <br><br>
+      <button class="button_page" type="submit">ゲーム機</button>
+    </div>
+
+  </body>
+</html>
