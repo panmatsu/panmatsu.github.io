@@ -4,6 +4,32 @@
     var ss = new SpeechSynthesisUtterance(text);
     ss.rate = 0.4;
     speechSynthesis.speak(ss);
+
+    //画像数
+    var num_img = 4;
+    //画像カウント
+    var cnt_img = 0;
+
+    function show(){
+        if(cnt_img==0){
+            //GBAの時、ミクロへ画像を変える
+            document.imgLink.src="game_micro.jpg";
+        }else if(cnt_img==1){
+            //ミクロの時、DSへ画像を変える
+            document.imgLink.src="game_ds.jpg";
+        }else if(cnt_img==2){
+            //DSの時、3DSへ画像を変える
+            document.imgLink.src="game_3ds.jpg";
+        }else{
+            //3DSの時、GBAへ変える
+            document.imgLink.src="game_gba.jpg";
+        }
+        //カウント繰り上げ
+        cnt_img++;
+        if(cnt_img >= num_img){
+            cnt_img=0;
+        }
+    }
 </script>
 <html lang=“ja”>
   <head>
@@ -17,15 +43,16 @@
     div.box_left{
         float: left;
         width: 63%;
-        border: 1px solid #000000;
     }
     div.box_right{
         float: right;
         width:33%;
-        border: 1px solid #000;
     }
     div.back{
         clear: both;
+        float: left;
+        width: 63%;
+        border: 1px solid #000;
     }
     img.reimg{
         max-width: 100%;
@@ -34,6 +61,7 @@
     }
     img.renext{
         max-width: 100%;
+        margin-top: 30%;
         height: auto;
 
     }
@@ -42,12 +70,12 @@
 <body>
     <div class="box_left">
         
-        <img class="reimg" src="game_micro.jpg" name="imgLink">
+        <img class="reimg" src="game_gba.jpg" name="imgLink">
         
     </div>
     <div class="box_right">
         
-        <img class="renext" src="next.jpg">
+        <img onclick="show()" class="renext" src="next.jpg">
         
 
     </div>
