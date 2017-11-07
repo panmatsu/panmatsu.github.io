@@ -1,1 +1,58 @@
-Hello Game
+<!DOCTYPE html>
+<script type="text/javascript">
+    var text = "ゲーム機についてのページです。";
+    var ss = new SpeechSynthesisUtterance(text);
+    ss.rate = 0.4;
+    speechSynthesis.speak(ss);
+</script>
+<html lang=“ja”>
+  <head>
+    <meta charset=“UFT-8”>
+    <title>Game</title>
+    <style>
+    body{
+        background: #d2b887;
+        font-family: Meiryo;
+    }
+    div.box_left{
+        float: left;
+        width: 63%;
+        border: 1px solid #000000;
+    }
+    div.box_right{
+        float: right;
+        width:33%;
+        border: 1px solid #000;
+    }
+    div.back{
+        clear: both;
+    }
+    img.reimg{
+        max-width: 100%;
+        height: auto;
+
+    }
+    img.renext{
+        max-width: 100%;
+        height: auto;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box_left">
+        
+        <img class="reimg" src="game_micro.jpg" name="imgLink">
+        
+    </div>
+    <div class="box_right">
+        
+        <img class="renext" src="next.jpg">
+        
+
+    </div>
+    <div class="back">
+        back
+    </div>
+</body>
+</html>
