@@ -16,16 +16,16 @@
     }
     div.title{
         background: #ffffff;
-        width: 300px;
+        width: 80%;
         padding: 10px;
         text-align: center;
-        border: 1px solid #cccccc;
+        border: 10px solid #cccccc;
         margin: 30px auto;
     }
     div.button_wrapper{
         text-align: center;
     }
-    button.button_page{
+    inform.button_page{
         font-weight: bold;
         font-size: 3.4em;
         padding: 80px, 100px;
@@ -46,21 +46,21 @@
     <div class="title">
         <h1>松の端末歴史名鑑</h1>
     </div>
-    <div class="button_wrapper">
-        <form action="index.html">
-        <button class="button_page" 
-                onclick="javascript:location.href ='cell.html';"
-                type="submit">
-            携帯電話へ
-        </button>
+    <div class="button_wrapper" style="margin-left:20%;margin-right:20%;">
+        <form>
+        <input type="button"
+                value="携帯電話へ"
+                class="button_page" 
+                style="width:100%;padding:20px;font-size:30px;"
+                onclick="location.href='cell.html'">
         </form>
         <br><br>
-        <form action="index.html">
-        <button class="button_page" 
-                onclick="javascript:location.href ='game.html';"
-                type="submit">
-            ゲーム機へ
-        </button>
+        <form>
+        <input type="button"
+                value="ゲーム機へ"
+                class="button_page" 
+                style="width:100%;padding:20px;font-size:30px;"
+                onclick="location.href ='game.html'">
         </form>
     </div>
 
