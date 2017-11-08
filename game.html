@@ -12,17 +12,27 @@
 
     function show(){
         if(cnt_img==0){
-            //GBAの時、ミクロへ画像を変える
-            document.imgLink.src="game_micro.jpg";
-        }else if(cnt_img==1){
-            //ミクロの時、DSへ画像を変える
+            //GBAの時、DSへ
             document.imgLink.src="game_ds.jpg";
-        }else if(cnt_img==2){
-            //DSの時、3DSへ画像を変える
+            document.getElementById("year").innerHTML="(2005~2010 )";
+            document.getElementById("game").innerHTML="・おいでよどうぶつの森<br>・テトリスDS";
+        }else if(cnt_img==1){
+            //DSの時、3DSへ
             document.imgLink.src="game_3ds.jpg";
+            document.getElementById("year").innerHTML="(2011~ )";
+            document.getElementById("game").innerHTML="・とびだせどうぶつの森<br>・ポケモン ブラック";
+        
+        }else if(cnt_img==2){
+            //3DSの時、ミクロへ
+            document.imgLink.src="game_micro.jpg";
+            document.getElementById("year").innerHTML="(2014~ )";
+            document.getElementById("game").innerHTML="・Mother 1+2<br>・SUPER MARIO BROTHERS";
+            
         }else{
-            //3DSの時、GBAへ変える
+            //ミクロの時、GBAへ
             document.imgLink.src="game_gba.jpg";
+            document.getElementById("year").innerHTML="(2001~2003)";
+            document.getElementById("game").innerHTML="・とっとこハム太郎２<br>・ポケットモンスター サファイア";
         }
         //カウント繰り上げ
         cnt_img++;
@@ -43,16 +53,23 @@
     div.box_left{
         float: left;
         width: 63%;
+        height: 59%;
+        border: 1px solid #000000;
     }
     div.box_right{
         float: right;
         width:33%;
+        height: 59%;
+        border: 1px solid #000000;
+
     }
     div.back{
         clear: both;
         float: left;
-        width: 63%;
-        border: 1px solid #000;
+        font-size: 3vh;
+        width: 80%;
+        height: 39%;
+        border: 1px solid #000000;
     }
     img.reimg{
         max-width: 100%;
@@ -63,7 +80,7 @@
         max-width: 100%;
         margin-top: 30%;
         height: auto;
-
+        border: 2px solid #000000;
     }
     </style>
 </head>
@@ -75,12 +92,19 @@
     </div>
     <div class="box_right">
         
-        <img onclick="show()" class="renext" src="next.jpg">
+        <img onclick="show()" class="renext" src="next.jpg" 
+            onmouseover="this.src='next_over.jpg'" 
+            onmouseout="this.src='next.jpg'">
         
 
     </div>
     <div class="back">
-        back
+        <a id="year">(2001~2003)<a><br>
+        よく遊んだ作品：<br>
+        <a id="game">  ・とっとこハム太郎２<br>
+                    ・ポケットモンスター サファイア</a>
+            
+        
     </div>
 </body>
 </html>
